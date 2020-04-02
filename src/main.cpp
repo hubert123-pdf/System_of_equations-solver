@@ -14,12 +14,12 @@ using namespace std;
  * jedynie absolutne minimum.
  */
 
-
+/*std::cout<<"Poprawny zapis macierzy: "<<
+std::endl" liczba liczba liczba potwierdz"<<
+std::endl" liczba liczba liczba potwierdz"<<
+std::endl" liczba liczba liczba potwierdz"<<;*/
 int main()
 {
+  Macierz Mac;
   UkladRownanLiniowych   UklRown;   // To tylko przykladowe definicje zmiennej
-
-  
-  cout << endl << " Start programu " << endl << endl;
-  cout<<"randomowy tekst";
 }

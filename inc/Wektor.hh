@@ -1,8 +1,8 @@
 #ifndef WEKTOR_HH
 #define WEKTOR_HH
 
-#include "rozmiar.h"
 #include <iostream>
+#include "rozmiar.h"
 
 
 /*
@@ -13,17 +13,21 @@ class Wektor {
   /*
    *  Tutaj trzeba wstawic definicje odpowiednich pol i metod prywatnych
    */
-   double skladowe[ROMZIAR];
+
+double skladowe[ROZMIAR];
   public:
   /*
    *  Tutaj trzeba wstawic definicje odpowiednich metod publicznych
    */ 
+   
    void setSkladowa(unsigned int index, double wartosc) 
    {
      skladowe[index]=wartosc;
    }  
-   double getskladowa(unsigned int index)const{
-   return skladowe[index];
+   double getSkladowa(unsigned int index)const
+   {
+     return skladowe[index];
+   }
    
 };
 
@@ -46,4 +50,10 @@ std::istream& operator >> (std::istream &Strm, Wektor &Wek);
  */
 std::ostream& operator << (std::ostream &Strm, const Wektor &Wek);
 
+/*przeciazenia operatorow wyrazen arytmetycznych*/
+Wektor operator+(Wektor Wek1,Wektor Wek2);
+Wektor operator-(Wektor Wek1,Wektor Wek2);
+Wektor operator*(Wektor Wek1,double Wek2);
+double operator*(Wektor Wek1,Wektor Wek2);
+Wektor operator/(Wektor Wek1,double Wek2);
 #endif
