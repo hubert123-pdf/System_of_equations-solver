@@ -9,20 +9,19 @@
  *  Tutaj trzeba opisac klase. Jakie pojecie modeluje ta klasa
  *  i jakie ma glowne cechy.
  */
-
 class Macierz{
   /*
    *  Tutaj trzeba wstawic definicje odpowiednich pol i metod prywatnych
    */
-double Macierz[ROZMIAR][ROZMIAR];
+double Macierz[ROZMIAR][ROZMIAR]; //Macierz jako tablica 2 wymiarowa
   public:
   /*
    *  Tutaj trzeba wstawic definicje odpowiednich metod publicznych
    */
-   void setMac(int index,int index1,int index2,int index3,double wartosc, double wartosc2,double wartosc3);
+   void setMac(int index,int index2,double wartosc);
    double getMac(int index,int index2)const
    {
-     return Macierz[index-1][index2-1];
+     return Macierz[index][index2];
    }
 
 };
@@ -46,5 +45,6 @@ std::istream& operator >> (std::istream &Strm, Macierz &Mac);
  */
 std::ostream& operator << (std::ostream &Strm, const Macierz &Mac);
 
-double Wyznacznik(Macierz Mac);
+double Wyznacznik(Macierz Mac); //funkcja licząca wyznacznik;
+void kwadrat(Macierz &Mac); //funkcja wyznaczająca macierz z kwadratwami poszczegónlych liczb;
 #endif

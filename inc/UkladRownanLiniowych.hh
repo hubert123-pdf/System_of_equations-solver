@@ -1,23 +1,26 @@
 #ifndef UKLADROWNANLINIOWYCH_HH
 #define UKLADROWNANLINIOWYCH_HH
 
+#include "rozmiar.h"
 #include <iostream>
-
+#include "Macierz.hh"
+#include "Wektor.hh"
 
 /*
  *  Tutaj trzeba opisac klase. Jakie pojecie modeluje ta klasa
  *  i jakie ma glowne cechy.
  */
 class UkladRownanLiniowych {
-  /*
-   *  Tutaj trzeba wstawic definicje odpowiednich pol i metod prywatnych
-   */
-  
+     
+  Wektor Wyniki;
+  Wektor Wyrazy_wolne;
+  Macierz Macierz1;
 
   public:
   /*
    *  Tutaj trzeba wstawic definicje odpowiednich metod publicznych
-   */    
+   */
+       
 };
 
 

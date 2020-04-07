@@ -19,7 +19,7 @@ double skladowe[ROZMIAR];
   /*
    *  Tutaj trzeba wstawic definicje odpowiednich metod publicznych
    */ 
-   
+  
    void setSkladowa(unsigned int index, double wartosc) 
    {
      skladowe[index]=wartosc;
@@ -28,9 +28,9 @@ double skladowe[ROZMIAR];
    {
      return skladowe[index];
    }
+
    
 };
-
 
 /*
  * To przeciazenie trzeba opisac. Co ono robi. Jaki format
@@ -56,4 +56,6 @@ Wektor operator-(Wektor Wek1,Wektor Wek2);
 Wektor operator*(Wektor Wek1,double Wek2);
 double operator*(Wektor Wek1,Wektor Wek2);
 Wektor operator/(Wektor Wek1,double Wek2);
+
+Wektor iloczynWektorowy( Wektor Wek1,Wektor Wek2); // iloczyn wektorowy dla macierzy 3x3
 #endif

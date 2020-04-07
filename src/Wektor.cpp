@@ -72,3 +72,17 @@ Wektor operator/(Wektor Wek1,double Wek2)
     }
     return wynik;
 }
+Wektor iloczynWektorowy( Wektor Wek1,Wektor Wek2)
+{
+    /*działanie na wzorze 
+    i j k
+    a1 a2 a3
+    b1 b2 b3
+    a x b = (a2*b3-a3*b2)i-(a1*b3-a3*b1)j+(a1*b2-a2*b1)k*/
+    Wektor Wek3;
+    double i=(Wek1.getSkladowa(1)*Wek2.getSkladowa(2))-(Wek1.getSkladowa(2)*Wek2.getSkladowa(1));
+    double j=Wek1.getSkladowa(0)*Wek2.getSkladowa(2)-Wek1.getSkladowa(2)*Wek2.getSkladowa(0);
+    double k=Wek1.getSkladowa(0)*Wek2.getSkladowa(1)-Wek1.getSkladowa(1)*Wek2.getSkladowa(0);
+    Wek3.setSkladowa(0,i);  Wek3.setSkladowa(1,-j);  Wek3.setSkladowa(2,k);  //przypisanie wartosci
+    return Wek3;
+}

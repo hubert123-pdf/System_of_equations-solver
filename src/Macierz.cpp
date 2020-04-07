@@ -7,21 +7,22 @@
  *  niz dwie linijki.
  *  Mniejsze metody mozna definiwac w ciele klasy.
  */
-  void Macierz::setMac(int index,int index1,int index2,int index3,double wartosc, double wartosc2,double wartosc3)
+  void Macierz::setMac(int index,int index2,double wartosc)
    {
-     Macierz[index][index1]=wartosc;
-     Macierz[index][index2]=wartosc2;
-     Macierz[index][index3]=wartosc3;
+     Macierz[index][index2]=wartosc;
    }
 
  std::istream& operator >> (std::istream &Strm, Macierz &Mac)
 {
 
-  double x,x2,x3;
+  double x;
   for(int i=0;i<ROZMIAR;i++)
   {
-       Strm>>x>>x2>>x3;
-       Mac.setMac(i,0,1,2,x,x2,x3);
+    for(int j=0;j<ROZMIAR;j++)
+    {
+       Strm>>x;
+       Mac.setMac(i,j,x);
+    }
   }
   return Strm;
 }
@@ -45,4 +46,17 @@ double Wyznacznik(Macierz Mac)
   C3=Mac.getMac(3,3)-Mac.getMac(3,1)/Mac.getMac(1,1)*Mac.getMac(1,3);
   wyznacznik=A1*((B2*C3)-(B3*C2));
   return wyznacznik;
+}
+void kwadrat(Macierz &Mac)
+{
+  double wartosc;
+  for(int i=0; i<ROZMIAR;i++)
+  {
+    for(int j=0;j<ROZMIAR;j++)
+    {
+      wartosc=Mac.getMac(i,j)*Mac.getMac(i,j);
+      Mac.setMac(i,j,wartosc); //przypisanie wartosci
+    }
+  }
+  
 }
