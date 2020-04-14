@@ -6,44 +6,47 @@
 
 
 /*
- *  Tutaj trzeba opisac klase. Jakie pojecie modeluje ta klasa
- *  i jakie ma glowne cechy.
+  klasa wektor jako podstawa budowy Macierzy
+  oraz wektoru wyrazow szukanych i wynikow
  */
 class Wektor {
   /*
-   *  Tutaj trzeba wstawic definicje odpowiednich pol i metod prywatnych
+      Wektor jako tablica 3 elementow dobule 
    */
-   double skladowe[ROMZIAR];
+   double skladowe[ROZMIAR];
   public:
   /*
-   *  Tutaj trzeba wstawic definicje odpowiednich metod publicznych
+      metody umozliwiające dostęp do danych klasy
    */ 
    void setSkladowa(unsigned int index, double wartosc) 
    {
      skladowe[index]=wartosc;
    }  
-   double getskladowa(unsigned int index)const{
-   return skladowe[index];
+   double getSkladowa(unsigned int index)const
+   {return skladowe[index];}
    
 };
 
 
 /*
- * To przeciazenie trzeba opisac. Co ono robi. Jaki format
- * danych akceptuje. Jakie jest znaczenie parametrow itd.
- * Szczegoly dotyczace zalecen realizacji opisow mozna
- * znalezc w pliku:
- *    ~bk/edu/kpo/zalecenia.txt 
+   operator wczytywania Wektora na strumien wejsciowy 
+   kazdemu miejscu w tablicy przypisywana jest wartosc
  */
 std::istream& operator >> (std::istream &Strm, Wektor &Wek);
 
 /*
- * To przeciazenie trzeba opisac. Co ono robi. Jaki format
- * danych akceptuje. Jakie jest znaczenie parametrow itd.
- * Szczegoly dotyczace zalecen realizacji opisow mozna
- * znalezc w pliku:
- *    ~bk/edu/kpo/zalecenia.txt 
+   operator wypisyania Wektora na strumien wyjsciowy
  */
 std::ostream& operator << (std::ostream &Strm, const Wektor &Wek);
-
+//operator dodawania Wektorów
+Wektor operator+(Wektor Wek1,Wektor Wek2);
+//operator dodawania Wektorów
+Wektor operator-(Wektor Wek1,Wektor Wek2);
+//operator mnożenia Wektorów wektorowo
+Wektor operator*(Wektor Wek1,double Wek2);
+//operator dodawania Wektorów skalarnie
+double operator*(Wektor Wek1,Wektor Wek2);
+//operator dzielenia Wektorów
+Wektor operator/(Wektor Wek1,double Wek2);
+Wektor iloczynWektorowy( Wektor Wek1,Wektor Wek2);
 #endif
