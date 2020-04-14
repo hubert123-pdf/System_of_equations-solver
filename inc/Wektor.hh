@@ -49,4 +49,4 @@ double operator*(Wektor Wek1,Wektor Wek2);
 //operator dzielenia Wektorów
 Wektor operator/(Wektor Wek1,double Wek2);
 Wektor iloczynWektorowy( Wektor Wek1,Wektor Wek2);
-#endif
+git #endif

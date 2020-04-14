@@ -67,4 +67,12 @@ std::ostream& operator << ( std::ostream&Strm, UkladRownanLiniowych&UklRown);
   double Wyznacznikx1(UkladRownanLiniowych U);
   double Wyznacznikx2(UkladRownanLiniowych U);
   double Wyznacznikx3(UkladRownanLiniowych U);
+/*
+ * To przeciazenie trzeba opisac. Co ono robi. Jaki format
+ * danych akceptuje. Jakie jest znaczenie parametrow itd.
+ * Szczegoly dotyczace zalecen realizacji opisow mozna
+ * znalezc w pliku:
+ *    ~bk/edu/kpo/zalecenia.txt 
+ */
+std::ostream& operator << ( std::ostream&Strm, const UkladRownanLiniowych&UklRown);
 #endif
