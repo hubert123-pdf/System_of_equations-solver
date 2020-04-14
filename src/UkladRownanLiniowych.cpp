@@ -7,3 +7,4 @@
  *  wiecej kodu niz dwie linijki.
  *  Mniejsze metody mozna definiwac w ciele klasy.
  */
+

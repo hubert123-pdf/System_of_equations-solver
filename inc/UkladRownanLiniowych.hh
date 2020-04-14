@@ -12,6 +12,8 @@ class UkladRownanLiniowych {
   /*
    *  Tutaj trzeba wstawic definicje odpowiednich pol i metod prywatnych
    */
+  
+
   public:
   /*
    *  Tutaj trzeba wstawic definicje odpowiednich metod publicznych
@@ -35,9 +37,5 @@ std::istream& operator >> (std::istream &Strm, UkladRownanLiniowych &UklRown);
  * znalezc w pliku:
  *    ~bk/edu/kpo/zalecenia.txt 
  */
-std::ostream& operator << ( std::ostream                  &Strm, 
-                            const UkladRownanLiniowych    &UklRown
-                          );
-
-
+std::ostream& operator << ( std::ostream&Strm, const UkladRownanLiniowych&UklRown);
 #endif

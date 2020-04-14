@@ -14,11 +14,11 @@ using namespace std;
  * jedynie absolutne minimum.
  */
 
-
+/*std::cout<<"Poprawny zapis macierzy: "<<
+std::endl" liczba liczba liczba potwierdz"<<
+std::endl" liczba liczba liczba potwierdz"<<
+std::endl" liczba liczba liczba potwierdz"<<;*/
 int main()
 {
-  UkladRownanLiniowych   UklRown;   // To tylko przykladowe definicje zmiennej
-
-  
-  cout << endl << " Start programu " << endl << endl;
+ // UkladRownanLiniowych   UklRown; 
 }
