@@ -16,6 +16,7 @@ class Macierz {
    {
      return kolumny[index];
    }
+   Wektor getWiersz(int index);
    double getMac(int kolumna, int wiersz)const
    {
      return kolumny[kolumna].getSkladowa(wiersz);
@@ -27,14 +28,14 @@ class Macierz {
     double znajdzWyznacznik(); //funkcja liczaca wyznacznik danej macierzy
     //funkcja wyswietlajaca macierz transonowana
     void Transponowana();
+    
 };
-
 /*
    operator wczytywania Macierzy na strumien wejsciowy,
    wczytanie 3 tablic sklaajacych sie z tablic 3 elemetnowych
  */
 std::istream& operator >> (std::istream &Strm, Macierz &Mac);
-
+Macierz operator*(Macierz Mac1,Macierz Mac2);
 /*
    operator wypisyania MAcierzy na strumien wyjsciowy
  */

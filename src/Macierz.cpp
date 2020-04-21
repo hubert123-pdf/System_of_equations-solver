@@ -61,3 +61,24 @@ double Macierz::znajdzWyznacznik()
      Trans.setMac(2,2,c3);
      std::cout<<Trans;
  }
+ Wektor Macierz::getWiersz(int index)
+{
+    Wektor Wiersz;
+    for (int i=0;i<ROZMIAR;i++)
+    {
+       Wiersz.setSkladowa(i,kolumny[index].getSkladowa(i));
+    }
+    return Wiersz;
+}
+Macierz operator*(Macierz Mac1,Macierz Mac2)
+{
+    Macierz Wynik;
+    for (int i=0;i<ROZMIAR;i++)
+    {
+        for(int j=0;j<ROZMIAR;j++)
+        {
+        Wynik.setMac(i,j,(Mac1.getKolumna(i)*Mac2.getWiersz(j)));
+        }
+    }
+    return Wynik;
+}
