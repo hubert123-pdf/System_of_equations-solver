@@ -29,15 +29,7 @@ Wektor operator+(Wektor Wek1,Wektor Wek2)
     }
     return wynik;
 }
-Wektor operator-(Wektor Wek1,Wektor Wek2)
-{
-    Wektor wynik;
-    for (int i=0;i<ROZMIAR;i++)
-    {
-        wynik.setSkladowa(i,Wek1.getSkladowa(i)-Wek2.getSkladowa(i));
-    }
-    return wynik;
-}
+
 double operator*(Wektor Wek1,Wektor Wek2)
 {
     double wynik;
@@ -80,4 +72,13 @@ Wektor iloczynWektorowy( Wektor Wek1,Wektor Wek2)
     double k=Wek1.getSkladowa(0)*Wek2.getSkladowa(1)-Wek1.getSkladowa(1)*Wek2.getSkladowa(0);
     Wek3.setSkladowa(0,i);  Wek3.setSkladowa(1,-j);  Wek3.setSkladowa(2,k);  //przypisanie wartosci
     return Wek3;
+}
+Wektor operator-(Wektor Wek1,Wektor Wek2)
+{
+    Wektor wynik;
+    for (int i=0;i<ROZMIAR;i++)
+    {
+        wynik.setSkladowa(i,Wek1.getSkladowa(i)-Wek2.getSkladowa(i));
+    }
+    return wynik;
 }

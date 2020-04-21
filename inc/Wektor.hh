@@ -41,7 +41,7 @@ std::ostream& operator << (std::ostream &Strm, const Wektor &Wek);
 //operator dodawania Wektorów
 Wektor operator+(Wektor Wek1,Wektor Wek2);
 //operator dodawania Wektorów
-Wektor operator-(Wektor Wek1,Wektor Wek2);
+
 //operator mnożenia Wektorów wektorowo
 Wektor operator*(Wektor Wek1,double Wek2);
 //operator dodawania Wektorów skalarnie
@@ -49,4 +49,5 @@ double operator*(Wektor Wek1,Wektor Wek2);
 //operator dzielenia Wektorów
 Wektor operator/(Wektor Wek1,double Wek2);
 Wektor iloczynWektorowy( Wektor Wek1,Wektor Wek2);
+Wektor operator-(Wektor Wek1,Wektor Wek2);
 git #endif
